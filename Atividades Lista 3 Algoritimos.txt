@@ -28,3 +28,58 @@ int main()
   printf("A diferença dos valores é:%d",resultado);
     return 0;
 } 
+
+/******************************************************************************
+Nome: Heriky Pereira de Oliveira
+
+Lista 3.
+
+b) Ler os valores de quatro notas escolares bimestrais de um aluno. Calcular a média aritmética desse aluno e
+apresentar a mensagem "Aprovado" se a média obtida for maior ou igual a 7; caso contrário, o programa deve
+solicitar a quinta nota (nota de exame) do aluno e calcular uma nova média aritmética entre a nota de exame e
+a primeira média aritmética. Se o valor da nova média for maior ou igual a sete, apresentar a mensagem
+"Aprovado em exame"; caso contrário, apresentar a mensagem "Reprovado". Informar também, após a
+apresentação das mensagens, o valor da média obtida pelo aluno.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+ float nota1=0;
+ float nota2=0;
+ float nota3=0;
+ float nota4=0;
+ float nota5=0;
+ printf("Digite a nota do aluno.");
+ scanf("%f",&nota1);
+  
+ printf("Segunda Nota");
+ scanf("%f",&nota2);
+  
+ printf("Terceira Nota");
+ scanf("%f",&nota3);
+  
+ printf("Quarta Nota");
+ scanf("%f",&nota4);
+  
+ float media=0;
+ media=(nota1+nota2+nota3+nota4)/4;
+
+ if(media>=7){
+     printf("Aprovado");
+ }else{
+     printf("Digite a nota do exame.");
+     scanf("%f",&nota5);
+     float novaMedia=0;
+     novamedia=(media+nota5)/2;
+     media=novaMedia;
+     if(novaMedia>=7){
+        printf("Aprovado em exame.");
+     }else{
+         printf("Reprovado");
+     }
+ }
+ printf("Média final: %f",media);
+    return 0;
+} 
